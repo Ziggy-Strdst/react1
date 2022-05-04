@@ -17,12 +17,13 @@ const Header = styled.div`
   }
 `;
 
-const AppHeader = ({ data }) => {
-  const value = data.length;
+const AppHeader = ({ liked, allPosts }) => {
   return (
     <Header as="a">
       <h1>John Rambo</h1>
-      <h2>{value} записей, из них понравилось 0</h2>
+      <h2>
+        Посты: {allPosts}, Понравилось: {liked}
+      </h2>
     </Header>
   );
 };
